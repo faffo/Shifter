@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Shifter</string>
+    <string name="action_change_theme">Change Theme</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="Thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="thu">Thu</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="action_bar_spinner">Spinner</string>
+    <string name="month">Month</string>
+    <string name="title_activity_c_a_n_c_e_l_l_a_r_e">CANCELLARE</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Shifter</string>
+    <string name="nav_header_subtitle">Daniele Ruffini - Mat. 138197</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="settings">Settings</string>
+
+    <string name="settingsLocale">locale</string>
+    <string name="settingsTheme">theme</string>
+    <string name="settingsFirstRun">firstRun</string>
+    <string name="add_shift">Add Shift</string>
+    <string name="full_shift">Full Shift</string>
+    <string name="half_shift">Half Shift</string>
+</resources>

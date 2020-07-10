@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themeOptions">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+    <string-array name="themeOptionValues">
+        <item>light</item>
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+    <string-array name="localeOptions">
+        <item>English</item>
+        <item>Italiano</item>
+    </string-array>
+    <string-array name="localeOptionValues">
+        <item>en</item>
+        <item>it</item>
+    </string-array>
+</resources>

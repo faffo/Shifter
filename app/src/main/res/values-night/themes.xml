@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents">
+        <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--        <item name="colorPrimary">#42A5F5</item>-->
+        <!--        <item name="colorPrimaryVariant">#000000</item>-->
+        <!--        <item name="colorOnPrimary">#FFFFFF</item>-->
+        <!--        <item name="colorSecondary">#2962FF</item>-->
+        <!--        <item name="colorSecondaryVariant">#0039CB</item>-->
+        <!--        <item name="colorOnSecondary">#FFFFFF</item>-->
+        <!--        <item name="colorError">#F44336</item>-->
+        <!--        <item name="colorOnError">#FFFFFF</item>-->
+        <!--        <item name="colorSurface">#FFFFFF</item>-->
+        <!--        <item name="colorOnSurface">#212121</item>-->
+        <!--        <item name="colorOnBackground">#212121</item>-->
+
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_more_vert_24</item>
+    </style>
+</resources>

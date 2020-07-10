@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:title="Appearance">
+        <DropDownPreference
+            app:icon="@drawable/ic_baseline_style_24"
+            app:key="@string/settingsTheme"
+            app:summary="Change application theme"
+            app:title="Theme"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:title="Accessibility">
+        <DropDownPreference
+            app:entries="@array/localeOptions"
+            app:entryValues="@array/localeOptionValues"
+            app:icon="@drawable/ic_baseline_language_24"
+            app:key="@string/settingsLocale"
+            app:summary="Select Locale"
+            app:title="Locale"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:title="About">
+
+        <Preference
+            app:icon="@drawable/ic_baseline_info_24"
+            app:key="about"
+            app:summary="A Mobile Programming Project\nBy Daniele Ruffini (mat. 138197)"
+            app:title="Shifter" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:title="Extra">
+        <Preference
+            app:icon="@drawable/ic_baseline_feedback_24"
+            app:key="feedback"
+            app:summary="Mobile Programming project"
+            app:title="Send feedback" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

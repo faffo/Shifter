@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroupShift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonFullShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/full_shift" />
+
+        <RadioButton
+            android:id="@+id/radioButtonHalfShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/half_shift" />
+    </RadioGroup>
+</LinearLayout>
