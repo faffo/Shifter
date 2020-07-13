@@ -4,6 +4,9 @@ import android.app.Application
 import android.icu.util.Calendar
 import android.os.Bundle
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.viewModelScope
 import com.faffo.shifter.R
 import com.faffo.shifter.ui.mainscreen.week.WeekFragment
 
@@ -36,11 +39,24 @@ class MonthViewModel(application: Application) : AndroidViewModel(application) {
             var bundle = Bundle()
             bundle.putInt("weekYear", i)
             bundle.putInt("currentMonth", calendar.get(Calendar.MONTH))
-            var week = Pair(id, WeekFragment())
-            week.second.arguments = bundle
-            weekList.add(week)
+
+            createWeekFragmentLive().observeForever(object : Observer<WeekFragment>{
+                override fun onChanged(weekFragment: WeekFragment) {
+                    var week = Pair(id, weekFragment)
+                    week.second.arguments = bundle
+                    weekList.add(week)
+                }
+            })
+
+//            var week = Pair(id, WeekFragment())
+//            week.second.arguments = bundle
+//            weekList.add(week)
 
         }
         return weekList
+    }
+
+    fun createWeekFragmentLive(): MutableLiveData<WeekFragment>{
+        return MutableLiveData(WeekFragment())
     }
 }

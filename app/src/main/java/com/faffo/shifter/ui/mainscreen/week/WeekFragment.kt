@@ -46,6 +46,7 @@ class WeekFragment : Fragment() {
         val calendarDate = calendar
 
         weekViewModel.setDays(calendarDate, currentMonth, view).forEach { day ->
+
             childFragmentManager.beginTransaction().add(day.first, day.second).commit()
         }
 

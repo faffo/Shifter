@@ -12,6 +12,8 @@ import androidx.core.view.GestureDetectorCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -21,6 +23,7 @@ import com.faffo.shifter.ui.mainscreen.month.MonthFragment
 import com.faffo.shifter.ui.mainscreen.week.WeekFragment
 import com.faffo.shifter.ui.settingsscreen.SettingsActivity
 import com.google.android.material.navigation.NavigationView
+import java.time.Month
 
 private const val DEBUG_TAG = "Gestures"
 
@@ -68,10 +71,21 @@ class MainActivity : AppCompatActivity(),
         toggleNavigation.isDrawerIndicatorEnabled = true
         toggleNavigation.syncState()
 
-        supportFragmentManager.beginTransaction().add(
-            R.id.drawer_content,
-            MonthFragment()
-        ).commit()
+        createMonthFragmentLive().observe(this,
+        object : Observer<MonthFragment>{
+            override fun onChanged(t: MonthFragment?) {
+                supportFragmentManager.beginTransaction().add(
+                    R.id.drawer_content,
+                    MonthFragment()
+                ).commit()
+            }
+
+        })
+
+//        supportFragmentManager.beginTransaction().add(
+//            R.id.drawer_content,
+//            MonthFragment()
+//        ).commit()
 
     }
 
@@ -136,6 +150,10 @@ class MainActivity : AppCompatActivity(),
         startActivity(
             Intent(this, SettingsActivity::class.java).apply { }
         )
+    }
+
+    fun createMonthFragmentLive(): MutableLiveData<MonthFragment>{
+        return MutableLiveData(MonthFragment())
     }
 
 }

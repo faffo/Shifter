@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.faffo.shifter.R
 import com.faffo.shifter.contentresolvers.CalendarContentResolver
@@ -108,15 +110,30 @@ class DayViewModel(application: Application) : AndroidViewModel(application) {
         var day = calendar.timeInMillis
         var eventBar = view.findViewById<FrameLayout>(R.id.bar_calendar_event)
         var eventTitle = view.findViewById<TextView>(R.id.tvCalendarEventTitle)
+
         if (settings.getBoolean(app.resources.getString(R.string.showCalendarEvents), false))
-            calendarEvents = getCalendarEvent(calendar)
-        if (calendarEvents.any()) {
-            eventBar.setBackgroundColor(view.resources.getColor(R.color.googleCalendarEvent, null))
-            eventTitle.text = calendarEvents[0].title
-        } else {
-            eventBar.setBackgroundColor(Color.TRANSPARENT)
-            eventTitle.text = ""
-        }
+            getCalendarEventLive(calendar).observeForever(object : Observer<List<CalendarEvent>>{
+                override fun onChanged(calendarEvents: List<CalendarEvent>?) {
+                    if (calendarEvents != null && calendarEvents.any()) {
+                        eventBar.setBackgroundColor(view.resources.getColor(R.color.googleCalendarEvent, null))
+                        eventTitle.text = calendarEvents[0].title
+                    } else {
+                        eventBar.setBackgroundColor(Color.TRANSPARENT)
+                        eventTitle.text = ""
+                    }
+                }
+
+            })
+
+//        if (settings.getBoolean(app.resources.getString(R.string.showCalendarEvents), false))
+//            calendarEvents = getCalendarEvent(calendar)
+//        if (calendarEvents.any()) {
+//            eventBar.setBackgroundColor(view.resources.getColor(R.color.googleCalendarEvent, null))
+//            eventTitle.text = calendarEvents[0].title
+//        } else {
+//            eventBar.setBackgroundColor(Color.TRANSPARENT)
+//            eventTitle.text = ""
+//        }
 
     }
 
@@ -197,5 +214,12 @@ class DayViewModel(application: Application) : AndroidViewModel(application) {
         calendarDateEnd: Calendar? = null
     ): List<CalendarEvent> {
         return calendarContentResolver.getDayEvents(calendarDateStart, calendarDateEnd)
+    }
+
+    fun getCalendarEventLive(
+        calendarDateStart: Calendar,
+        calendarDateEnd: Calendar? = null
+    ): LiveData<List<CalendarEvent>> {
+        return MutableLiveData(calendarContentResolver.getDayEvents(calendarDateStart, calendarDateEnd))
     }
 }
