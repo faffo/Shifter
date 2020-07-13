@@ -45,4 +45,8 @@
     <string name="add_shift">Add Shift</string>
     <string name="full_shift">Full Shift</string>
     <string name="half_shift">Half Shift</string>
+    <string name="showCalendarEvents">showCalendarEvents</string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="refresh">Refresh</string>
 </resources>

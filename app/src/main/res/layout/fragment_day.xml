@@ -7,20 +7,77 @@
 
     <TextView
         android:id="@+id/tvDayNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="50dp"
         android:text="DayN"
         android:textColor="?android:attr/textColorPrimary"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="1"/>
 
-    <FrameLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
 
-    </FrameLayout>
+        <FrameLayout
+            android:id="@+id/day_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/tvDayInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bar_calendar_event"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="3"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/tvCalendarEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="40dp"
+                android:text="" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bar_shift"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="3dp"
+            android:layout_weight="3"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/tvShiftType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="40dp"
+                android:text="" />
+        </FrameLayout>
+    </LinearLayout>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -9,8 +9,8 @@ data class CalendarEvent(val cursor: Cursor) {
     var id = cursor.getLong(3)
     var title = cursor.getString(4)
     var description = cursor.getString(5)
-    var dateStartInt = cursor.getInt(6)
-    var dateEndInt = cursor.getInt(7)
+    var dateStartLong = cursor.getLong(6)
+    var dateEndLong = cursor.getLong(7)
     var allDay = cursor.getInt(8)
     var eventLocation = cursor.getString(9)
 }

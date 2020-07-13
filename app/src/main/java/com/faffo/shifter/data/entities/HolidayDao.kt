@@ -6,9 +6,6 @@ import androidx.room.*
 @Dao
 interface HolidayDao {
     @Query("SELECT * FROM Holiday")
-    fun getHolidayAllLD(): LiveData<List<Holiday>>
-
-    @Query("SELECT * FROM Holiday")
     fun getHolidayDirect(): List<Holiday>
 
     @Query("SELECT * FROM Holiday")
@@ -16,6 +13,9 @@ interface HolidayDao {
 
     @Query("SELECT * FROM HOLIDAY WHERE month = :month AND day = :day")
     suspend fun getHolydayByMonthDay(month: Int, day: Int): List<Holiday>
+
+    @Query("SELECT * FROM HOLIDAY WHERE month = :month AND day = :day")
+    fun getHolidaysByMonthDayLive(month: Int, day: Int): LiveData<List<Holiday>>
 
     @Query("SELECT * FROM Holiday WHERE dateStart < :date AND dateEnd > :date")
     suspend fun getHolidayByDate(date: Long): List<Holiday>

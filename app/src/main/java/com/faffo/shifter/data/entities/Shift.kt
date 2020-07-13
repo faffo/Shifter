@@ -11,12 +11,10 @@ import androidx.room.PrimaryKey
 data class Shift(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val type: Int,
-    val lenght: Int,
+    val length: Int,
     @ColumnInfo(name = "employee") val employee: String, //@Embedded val employee: Employee,
     @ColumnInfo(name = "day") val day: Int,
     val month: Int,
     val year: Int,
     val color: String?
-) {
-
-}
+)

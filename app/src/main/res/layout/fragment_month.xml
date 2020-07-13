@@ -12,102 +12,106 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            layout="@layout/week_days_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" />
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/mon"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/mon"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
 
-            </FrameLayout>
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/tue"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/tue"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/wed"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/wed"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/thu"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/thu"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/fri"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/fri"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/sat"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/sat"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+<!--            <FrameLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/sun"
-                    android:textAlignment="center"
-                    android:textColor="?android:attr/textColorPrimary" />
-            </FrameLayout>
-        </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:text="@string/sun"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="?android:attr/textColorPrimary" />-->
+<!--            </FrameLayout>-->
+<!--        </LinearLayout>-->
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_week_1"
@@ -148,12 +152,12 @@
         </androidx.fragment.app.FragmentContainerView>
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_shift"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/add_shift"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_add_shift"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:contentDescription="@string/add_shift"-->
+<!--        app:srcCompat="@drawable/ic_baseline_add_24" />-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

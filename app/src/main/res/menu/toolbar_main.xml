@@ -8,6 +8,6 @@
     <!--        android:onClick="openSettings" />-->
     <item
         android:id="@+id/menu_action_refresh"
-        android:title="Refresh" />
+        android:title="@string/refresh" />
 
 </menu>

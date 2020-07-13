@@ -7,7 +7,7 @@ import com.faffo.shifter.data.entities.HolidayDao
 class HolidayRepository(private val holidayDao: HolidayDao) {
     fun getholidaysDirect(): List<Holiday> = holidayDao.getHolidayDirect()
     suspend fun getHolidays(): List<Holiday> = holidayDao.getHolidayAll()
-    fun getHolidaysLD(): LiveData<List<Holiday>> = holidayDao.getHolidayAllLD()
+
     suspend fun refreshHolidays(holidays: List<Holiday>): List<Long> =
         holidayDao.refreshHoliday(holidays)
 
@@ -19,4 +19,7 @@ class HolidayRepository(private val holidayDao: HolidayDao) {
 
     suspend fun getHolydayByMonthDay(month: Int, day: Int): List<Holiday> =
         holidayDao.getHolydayByMonthDay(month, day)
+
+    fun getHolidaysByMonthDayLive(month: Int, day: Int): LiveData<List<Holiday>> =
+        holidayDao.getHolidaysByMonthDayLive(month, day)
 }

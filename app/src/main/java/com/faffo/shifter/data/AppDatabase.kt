@@ -8,7 +8,7 @@ import com.faffo.shifter.data.entities.*
 import com.faffo.shifter.data.entities.TODO.Department
 
 @Database(
-    version = 4,
+    version = 5,
     entities = [Employee::class, Department::class, Shift::class, Holiday::class]
 )
 abstract class AppDatabase : RoomDatabase() {

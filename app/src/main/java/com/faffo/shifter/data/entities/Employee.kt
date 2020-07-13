@@ -2,7 +2,7 @@ package com.faffo.shifter.data.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.faffo.shifter.EmploymentType
+import com.faffo.shifter.utils.EmploymentType
 
 @Entity
 data class Employee(
@@ -11,5 +11,5 @@ data class Employee(
     val surname: String,
     val department: String
 ) {
-    var employmentType: Int = EmploymentType.FULL_TIME.hours;
+    var employmentType: Int = EmploymentType.FULL_TIME.hours
 }
